@@ -1,11 +1,22 @@
+const ContactsRepository = require('../repositories/ContactsRepository')
+
 class ContactController {
-	index(request, response) {
-		// list all registers
-		response.send("Contacts");
+	async index(request, response) {
+		const contacts = await ContactsRepository.findAll()
+
+		response.json(contacts)
 	}
 
-	show() {
-		// show a register
+	async show(request, response) {
+    const { id } = request.params;
+
+		const contact = await ContactsRepository.findById(id)
+
+		if (!contact) {
+			return response.status(404).json({ error: 'User not found' })
+		}
+
+		response.json(contact)
 	}
 
 	update() {
@@ -17,4 +28,4 @@ class ContactController {
 	}
 }
 
-module.exports = new ContactController();
+module.exports = new ContactController()
