@@ -11,7 +11,6 @@ class ContactController {
 		const { id } = request.params
 
 		const contact = await ContactsRepository.findById(id)
-
 		if (!contact) {
 			return response.status(404).json({ error: 'User not found' })
 		}
@@ -25,7 +24,6 @@ class ContactController {
 		if (!name) {
 			return response.status(400).json({ error: 'Name is required' })
 		}
-
 		const contactExists = await ContactsRepository.findByEmail(email)
 
 		if (contactExists) {
@@ -44,15 +42,40 @@ class ContactController {
 		response.json(contact)
 	}
 
-	update() {
-		// edit a register
+	async update(request, response) {
+		const { id } = request.params
+		const { name, email, phone, category_id } = request.body
+
+		const contactExists = await ContactsRepository.findById(id)
+		if (!contactExists) {
+			return response.status(404).json({ error: 'User not found' })
+		}
+
+		if (!name) {
+			return response.status(400).json({ error: 'Name is required' })
+		}
+
+		const contactByEmail = await ContactsRepository.findByEmail(email)
+		if (contactByEmail && contactByEmail.id !== id) {
+			return response
+				.status(400)
+				.json({ error: 'This e-mail is already in use' })
+		}
+
+		const contact = await ContactsRepository.update(id, {
+			name,
+			email,
+			phone,
+			category_id,
+		})
+
+		response.json(contact)
 	}
 
 	async delete(request, response) {
 		const { id } = request.params
 
 		const contact = await ContactsRepository.findById(id)
-
 		if (!contact) {
 			return response.status(404).json({ error: 'User not found' })
 		}
