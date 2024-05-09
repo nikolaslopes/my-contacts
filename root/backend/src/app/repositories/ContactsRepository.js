@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require('uuid')
+const { v4: uuidv4 } = require('uuid');
 
 let contacts = [
 	{
@@ -15,25 +15,25 @@ let contacts = [
 		phone: '2222222',
 		category_id: uuidv4(),
 	},
-]
+];
 
 class ContactsRepository {
 	findAll() {
 		return new Promise((resolve) => {
-			resolve(contacts)
-		})
+			resolve(contacts);
+		});
 	}
 
 	findById(id) {
 		return new Promise((resolve) => {
-			resolve(contacts.find((contact) => contact.id === id))
-		})
+			resolve(contacts.find((contact) => contact.id === id));
+		});
 	}
 
 	findByEmail(email) {
 		return new Promise((resolve) => {
-			resolve(contacts.find((contact) => contact.email === email))
-		})
+			resolve(contacts.find((contact) => contact.email === email));
+		});
 	}
 
 	create({ name, email, phone, category_id }) {
@@ -44,12 +44,12 @@ class ContactsRepository {
 				email,
 				phone,
 				category_id,
-			}
+			};
 
-			contacts.push(newContact)
+			contacts.push(newContact);
 
-			resolve(newContact)
-		})
+			resolve(newContact);
+		});
 	}
 
 	update(id, { name, email, phone, category_id }) {
@@ -60,22 +60,22 @@ class ContactsRepository {
 				email,
 				phone,
 				category_id,
-			}
+			};
 
 			contacts = contacts.map((contact) =>
 				contact.id === id ? updatedContact : contact,
-			)
+			);
 
-			resolve(updatedContact)
-		})
+			resolve(updatedContact);
+		});
 	}
 
 	delete(id) {
 		return new Promise((resolve) => {
-			contacts = contacts.filter((contact) => contact.id !== id)
-			resolve()
-		})
+			contacts = contacts.filter((contact) => contact.id !== id);
+			resolve();
+		});
 	}
 }
 
-module.exports = new ContactsRepository()
+module.exports = new ContactsRepository();
