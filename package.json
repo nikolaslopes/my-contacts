@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "lint:check": "prettier --check .",
-    "lint:fix": "prettier --write ."
+    "lint:fix": "prettier --write .",
+    "prepare": "husky"
   },
   "author": "Nikolas Lopes",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^9.0.11",
     "nodemon": "^3.1.0",
     "prettier": "3.2.5"
   },
