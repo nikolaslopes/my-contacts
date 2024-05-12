@@ -9,7 +9,7 @@ class CategoriesRepository {
 		return rows;
 	}
 
-	async create({ name }) {
+	async create(name) {
 		const [row] = await db.query(
 			`
       INSERT INTO categories(name)
@@ -21,6 +21,18 @@ class CategoriesRepository {
 
 		return row;
 	}
+
+  async update(id, { name }) {
+    const [row] = await db.query(
+      `
+        UPDATE categories
+        SET name = $1
+        WHERE id = $2
+        RETURNING *
+      `, [name, id]);
+
+    return row;
+  }
 
   async delete(id) {
     const deleteOp = await db.query(
