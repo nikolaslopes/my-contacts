@@ -7,8 +7,7 @@
     "dev": "nodemon src/index.js",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "prepare": "husky"
   },
   "author": "Nikolas Lopes",
   "license": "MIT",
