@@ -4,6 +4,7 @@ class CategoriesRepository {
 	async findAll() {
 		const rows = await db.query(`
       SELECT * FROM categories
+      ORDER BY name ASC
     `);
 
 		return rows;
