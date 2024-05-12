@@ -1,22 +1,22 @@
 {
-	"name": "backend",
-	"version": "1.0.0",
-	"description": "API to store contacts",
-	"main": "src/index.js",
-	"scripts": {
-		"dev": "nodemon src/index.js",
-		"lint:check": "biome lint ./src",
-		"lint:fix": "biome check --apply ./src"
-	},
-	"author": "Nikolas Lopes",
-	"license": "MIT",
-	"devDependencies": {
-		"nodemon": "^3.1.0",
-		"prettier": "3.2.5"
-	},
-	"dependencies": {
-		"express": "^4.19.2",
-		"express-async-errors": "^3.1.1",
-		"pg": "^8.11.5"
-	}
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "API to store contacts",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "author": "Nikolas Lopes",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prettier": "3.2.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.11.5"
+  }
 }
