@@ -13,6 +13,7 @@ router.delete('/contacts/:id', ContactController.delete);
 
 router.get('/categories', CategoryController.index);
 router.post('/categories', CategoryController.store);
-router.delete('/categories/:id', CategoryController.delete)
+router.put('/categories/:id', CategoryController.update)
+router.delete('/categories/:id', CategoryController.delete);
 
 module.exports = router;
