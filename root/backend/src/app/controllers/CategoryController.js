@@ -23,6 +23,11 @@ class CategoryController {
     const { id } = request.params;
     const { name } = request.body;
 
+    const categoryExists = await CategoriesRepository.findById(id);
+    if (!categoryExists) {
+      return response.status(404).json({ error: 'Category not found'});
+    }
+
     if (!name) {
       return response.status(400).json({ error: 'Name is required'});
     }
