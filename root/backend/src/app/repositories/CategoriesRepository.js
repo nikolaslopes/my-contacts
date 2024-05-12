@@ -10,25 +10,29 @@ class CategoriesRepository {
 		return rows;
 	}
 
-  async findById(id) {
-    const [row] = await db.query(
-      `
+	async findById(id) {
+		const [row] = await db.query(
+			`
         SELECT * FROM categories
         WHERE id = $1
-      `
-    , [id]);
+      `,
+			[id],
+		);
 
-    return row;
-  }
+		return row;
+	}
 
-  async findByName(name) {
-    const [row] = await db.query(`
+	async findByName(name) {
+		const [row] = await db.query(
+			`
       SELECT * FROM categories
       WHERE name = $1
-    `, [name]);
+    `,
+			[name],
+		);
 
-    return row;
-  }
+		return row;
+	}
 
 	async create(name) {
 		const [row] = await db.query(
@@ -43,28 +47,31 @@ class CategoriesRepository {
 		return row;
 	}
 
-  async update(id, { name }) {
-    const [row] = await db.query(
-      `
+	async update(id, { name }) {
+		const [row] = await db.query(
+			`
         UPDATE categories
         SET name = $1
         WHERE id = $2
         RETURNING *
-      `, [name, id]);
+      `,
+			[name, id],
+		);
 
-    return row;
-  }
+		return row;
+	}
 
-  async delete(id) {
-    const deleteOp = await db.query(
-      `
+	async delete(id) {
+		const deleteOp = await db.query(
+			`
         DELETE FROM categories
         WHERE id = $1
-      `
-    , [id]);
+      `,
+			[id],
+		);
 
-    return deleteOp;
-  }
+		return deleteOp;
+	}
 }
 
 module.exports = new CategoriesRepository();
