@@ -26,8 +26,8 @@ class ContactController {
     if (!name) {
       return response.status(400).json({ error: 'Name is required' });
     }
-    const contactExists = await ContactsRepository.findByEmail(email);
 
+    const contactExists = await ContactsRepository.findByEmail(email);
     if (contactExists) {
       return response
         .status(400)
@@ -41,7 +41,7 @@ class ContactController {
       category_id,
     });
 
-    response.json(contact);
+    response.status(201).json(contact);
   }
 
   async update(request, response) {
