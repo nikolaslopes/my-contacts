@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "npm run services:up && nodemon src/index.js",
     "services:up": "docker start pg",
+    "setup-db": "docker pull postgres && docker run --name pg -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres && sleep 5 && npm run create-db && npm run create-tables",
+    "create-db": "docker exec -it pg psql -U root -c 'CREATE DATABASE mycontacts'",
+    "create-tables": "docker exec -i pg psql -U root mycontacts < schema.sql",
     "format:check": "biome format ./src",
     "format:fix": "biome format --write ./src",
     "lint:check": "biome lint ./src",
