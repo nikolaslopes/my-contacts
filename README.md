@@ -118,3 +118,13 @@ curl -X POST http://localhost:3001/contacts \
   "phone": "123-456-7890",
 }'
 ```
+
+## Author
+
+<a href="https://github.com/nikolaslopes">
+  <img alt="Static Badge" src="https://img.shields.io/badge/linkedin-%2371B7FB?style=for-the-badge&logo=linkedin&color=blue">
+</a>
+
+<a href="https://github.com/nikolaslopes">
+  <img alt="Static Badge" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+</a>
