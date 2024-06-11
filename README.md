@@ -2,7 +2,7 @@
 
 ## Description
 
-The MyContacts API is a CRUD (Create, Read, Update, Delete) application built with Express that allows you to manage contacts. This application uses PostgreSQL as the database.
+The MyContacts API is a application to manage contacts built in Node.js, JavaScript & PostgreSQL.
 
 ## Stacks
 
