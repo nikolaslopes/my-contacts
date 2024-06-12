@@ -124,6 +124,6 @@ curl -X POST http://localhost:3001/contacts \
 
 ## Author
 
-[![Static Badge](https://img.shields.io/badge/nikolas%20lopes-%23F6F5FC?style=for-the-badge&logo=linkedin&label=linkedin&labelColor=2371B7)](https://www.linkedin.com/in/nikolaslopes/)
+[![Static Badge](https://img.shields.io/badge/nikolas%20lopes-c1c1c1?style=for-the-badge&logo=linkedin&label=linkedin&labelColor=2371B7)](https://www.linkedin.com/in/nikolaslopes/)
 
-[![Static Badge](https://img.shields.io/badge/nikolaslopes-F6F5FC?style=for-the-badge&logo=github&label=github&labelColor=%23222)](https://github.com/nikolaslopes)
+[![Static Badge](https://img.shields.io/badge/nikolaslopes-c1c1c1?style=for-the-badge&logo=github&label=github&labelColor=%23222)](https://github.com/nikolaslopes)
