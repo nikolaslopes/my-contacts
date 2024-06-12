@@ -121,9 +121,6 @@ curl -X POST http://localhost:3001/contacts \
 
 ## Author
 
-<a href="https://www.linkedin.com/in/nikolaslopes/">
-    <img alt="Static Badge" src="https://img.shields.io/badge/linkedin-%2371B7FB?style=for-the-badge&logo=linkedin&color=blue" />
-</a>
-<a href="https://github.com/nikolaslopes">
-    <img alt="Static Badge" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-</a>
+[![Static Badge](https://img.shields.io/badge/nikolas%20lopes-%23F6F5FC?style=for-the-badge&logo=linkedin&label=linkedin&labelColor=2371B7)](https://www.linkedin.com/in/nikolaslopes/)
+
+[![Static Badge](https://img.shields.io/badge/nikolaslopes-F6F5FC?style=for-the-badge&logo=github&label=github&labelColor=%23222)](https://github.com/nikolaslopes)
