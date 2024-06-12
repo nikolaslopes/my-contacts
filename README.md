@@ -6,9 +6,12 @@ The MyContacts API is a application to manage contacts built in Node.js, JavaScr
 
 ## Stacks
 
-<a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,docker,nodejs,express,postgres&theme=dark" />
-</a>
+![Static Badge](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=JavaScript&logoColor=**white**)
+![Static Badge](https://img.shields.io/badge/Express.js-20232A?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js&logoColor=green)
+![Static Badge](https://img.shields.io/badge/docker-%2320232A.svg?style=for-the-badge&logo=docker&logoColor=**blue**)
+![Static Badge](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=**blue**)
+
 
 ## Features
 
